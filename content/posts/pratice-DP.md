@@ -41,7 +41,7 @@ for(int k=1; k<=min(a[i], j); k++)
 
 ### [Luogu P1541](https://www.luogu.com.cn/problem/P1541)
 
-定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的最大值。
+定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。
 
 轉移：  
 ```
