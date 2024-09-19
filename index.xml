@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sharpless298&#39;s Blog</title>
-    <link>https://sharpless298.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Sharpless298&#39;s Blog</description>
     <image>
       <title>Sharpless298&#39;s Blog</title>
-      <url>https://sharpless298.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://sharpless298.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <copyright>Copyright © 2024 Sharpless298</copyright>
     <lastBuildDate>Wed, 18 Sep 2024 00:53:31 +0800</lastBuildDate>
-    <atom:link href="https://sharpless298.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DP 練習</title>
-      <link>https://sharpless298.github.io/posts/pratice-dp/</link>
+      <link>http://localhost:1313/posts/pratice-dp/</link>
       <pubDate>Wed, 18 Sep 2024 00:53:31 +0800</pubDate>
-      <guid>https://sharpless298.github.io/posts/pratice-dp/</guid>
+      <guid>http://localhost:1313/posts/pratice-dp/</guid>
       <description>&lt;p&gt;記錄一下練習DP的過程，&lt;del&gt;沒偷懶的話&lt;/del&gt;打算一天至少一題，難度慢慢遞增。&lt;/p&gt;
 &lt;h3 id=&#34;luogu-p1077httpswwwluogucomcnproblemp1077&#34;&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1077&#34;&gt;Luogu P1077&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;想法&#34;&gt;想法&lt;/h4&gt;
@@ -40,7 +40,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面相當於 $dp[j]$ 加上 $dp[j-k]$ 到 $dp[j-1]$ 這個區間，因此我們可以使用前綴和優化。&lt;/p&gt;
 &lt;p&gt;時間複雜度 $\mathcal{O}(nm)$。&lt;/p&gt;
 &lt;h3 id=&#34;luogu-p1541httpswwwluogucomcnproblemp1541&#34;&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1541&#34;&gt;Luogu P1541&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的最大值。&lt;/p&gt;
+&lt;p&gt;定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。&lt;/p&gt;
 &lt;p&gt;轉移：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dp[a][b][c][d] = max(dp[a-1][b][c][d], dp[a][b-1][c][d], dp[a][b][c-1][d], dp[a][b][c][d-1]) + A[a+2*b+3*c+4*d];
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;時間複雜度$\mathcal{O}((\frac{M}{4})^4)$&lt;/p&gt;</description>
