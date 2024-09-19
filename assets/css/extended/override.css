@@ -1,5 +1,10 @@
+:root {
+    --line-height:1.1em;
+    --post-width:960px;
+    --monospace: monospace;
+}
 .main.post {
-    --main-width:780px;
+    --main-width:880px;
     position: relative;
 	min-height: calc(100vh - var(--header-height) - var(--footer-height));
 	max-width: calc(var(--main-width) + var(--gap) * 2);
