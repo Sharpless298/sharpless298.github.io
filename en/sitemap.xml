@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/hugo-PaperMod/posts/pratice-dp/</loc>
+    <lastmod>2024-09-18T00:53:31+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/</loc>
+    <lastmod>2024-09-18T00:53:31+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://localhost:1313/hugo-PaperMod/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/hugo-PaperMod/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/posts/</loc>
+    <lastmod>2024-09-18T00:53:31+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/tags/</loc>
+    <lastmod>2024-09-18T00:53:31+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/tags/test/</loc>
+    <lastmod>2024-09-18T00:53:31+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/archives/</loc>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/hugo-PaperMod/series/</loc>
+  </url>
+</urlset>
