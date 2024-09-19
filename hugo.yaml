@@ -11,7 +11,7 @@ buildExpired: false
 
 minify:
   disableXML: true
-  minifyOutput: true
+  # minifyOutput: true
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -23,13 +23,13 @@ params:
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
-  disableThemeToggle: true
+  disableThemeToggle: false
 
   ShowReadingTime: false
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: false
   UseHugoToc: false
@@ -116,11 +116,11 @@ menu:
   main:
     - identifier: archives
       name: Archives
-      url: /archives/
+      url: archives/
       weight: 10
     - identifier: tags
       name: Tags
-      url: /tags/
+      url: tags/
       weight: 20
     # - identifier: example
       # name: example.org

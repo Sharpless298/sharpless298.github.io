@@ -1,0 +1,51 @@
++++
+title = 'DP 練習'
+date = 2024-09-18T00:53:31+08:00
+draft = false
+math = true
+tags = ["DP"]
++++
+
+記錄一下練習DP的過程，~~沒偷懶的話~~打算一天至少一題，難度慢慢遞增。
+
+### [Luogu P1077](https://www.luogu.com.cn/problem/P1077)
+
+#### 想法
+定義 $dp[i][j]$ 為第$i$種花放第$j$個花盆的方法數
+
+轉移 $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$
+
+時間複雜度 $\mathcal{O}(nma_i)$，空間複雜度 $\mathcal{O}(nm)$
+
+#### 改進1
+觀察一下發現可以滾動，空間壓至 $\mathcal{O}(m)$。
+
+#### 改進2
+觀察一下發現可以像背包一樣倒著跑
+```cpp
+for(int i=0; i<n; i++)
+    for(int j=m; j>=1; j--)
+        for(int k=1; k<=min(a[i], j); k++)
+            dp[j] = dp[j] + dp[j-k];
+```
+空間一樣 $\mathcal{O}(m)$。
+
+#### 改進3
+```cpp
+for(int k=1; k<=min(a[i], j); k++)
+    dp[j] = dp[j] + dp[j-k];
+```
+上面相當於 $dp[j]$ 加上 $dp[j-k]$ 到 $dp[j-1]$ 這個區間，因此我們可以使用前綴和優化。
+
+時間複雜度 $\mathcal{O}(nm)$。
+
+### [Luogu P1541](https://www.luogu.com.cn/problem/P1541)
+
+定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的最大值。
+
+轉移：  
+```
+dp[a][b][c][d] = max(dp[a-1][b][c][d], dp[a][b-1][c][d], dp[a][b][c-1][d], dp[a][b][c][d-1]) + A[a+2*b+3*c+4*d];
+```
+時間複雜度$\mathcal{O}((\frac{M}{4})^4)$
+
