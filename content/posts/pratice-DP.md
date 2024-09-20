@@ -44,8 +44,12 @@ for(int k=1; k<=min(a[i], j); k++)
 定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。
 
 轉移：  
-```
-dp[a][b][c][d] = max(dp[a-1][b][c][d], dp[a][b-1][c][d], dp[a][b][c-1][d], dp[a][b][c][d-1]) + A[a+2*b+3*c+4*d];
-```
+    $$\begin{align*}
+    dp[a][b][c][d] = & \max \left( dp[a-1][b][c][d], \right. \\\\
+                     & \quad \quad \ \ dp[a][b-1][c][d], \\\\
+                     & \quad \quad \ \ dp[a][b][c-1][d], \\\\
+                     & \quad \quad \ \ dp[a][b][c][d-1] \left. \right) + A[a + 2b + 3c + 4d]\\\\
+    \end{align*}$$
+
 時間複雜度$\mathcal{O}((\frac{M}{4})^4)$
 
