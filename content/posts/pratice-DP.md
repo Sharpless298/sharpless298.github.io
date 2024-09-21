@@ -9,12 +9,15 @@ tags = ["DP"]
 記錄一下練習DP的過程，~~沒偷懶的話~~打算一天至少一題，難度慢慢遞增。
 
 ## Luogu P1077
+
+[Link](https://www.luogu.com.cn/problem/P1077)
+
 ### 想法
-定義 $dp[i][j]$ 為第$i$種花放第$j$個花盆的方法數
+定義 $dp[i][j]$ 為第$i$種花放第$j$個花盆的方法數，
 
-轉移 $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$
+轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$
 
-時間複雜度 $\mathcal{O}(nma_i)$，空間複雜度 $\mathcal{O}(nm)$
+時間複雜度 $\mathcal{O}(nma_i)$，空間複雜度 $\mathcal{O}(nm)$。
 
 ### 改進1
 觀察一下發現可以滾動，空間壓至 $\mathcal{O}(m)$。
@@ -40,6 +43,8 @@ for(int k=1; k<=min(a[i], j); k++)
 
 ## Luogu P1541
 
+[Link](https://www.luogu.com.cn/problem/P1541)
+
 定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。
 
 轉移：  
@@ -50,5 +55,5 @@ for(int k=1; k<=min(a[i], j); k++)
                      & \quad \quad \ \ dp[a][b][c][d-1] \left. \right) + A[a + 2b + 3c + 4d]\\\\
     \end{align*}$$
 
-時間複雜度$\mathcal{O}((\frac{M}{4})^4)$
+時間複雜度$\mathcal{O}((\frac{M}{4})^4)$。
 
