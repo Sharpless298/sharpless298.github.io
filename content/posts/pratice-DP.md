@@ -13,7 +13,7 @@ tags = ["DP"]
 [Link](https://www.luogu.com.cn/problem/P1077)
 
 ### 想法
-定義 $dp[i][j]$ 為第$i$種花放第$j$個花盆的方法數，
+定義 $dp[i][j]$ 為第 $i$ 種花放第 $j$ 個花盆的方法數，
 
 轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$
 
