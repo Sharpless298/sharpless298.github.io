@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sharpless298&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://sharpless298.github.io/</link>
     <description>Recent content on Sharpless298&#39;s Blog</description>
     <image>
       <title>Sharpless298&#39;s Blog</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://sharpless298.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sharpless298.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.134.3</generator>
     <language>en</language>
     <copyright>Copyright © 2024 Sharpless298</copyright>
     <lastBuildDate>Wed, 18 Sep 2024 00:53:31 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sharpless298.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DP 練習</title>
-      <link>http://localhost:1313/posts/pratice-dp/</link>
+      <link>https://sharpless298.github.io/posts/pratice-dp/</link>
       <pubDate>Wed, 18 Sep 2024 00:53:31 +0800</pubDate>
-      <guid>http://localhost:1313/posts/pratice-dp/</guid>
+      <guid>https://sharpless298.github.io/posts/pratice-dp/</guid>
       <description>&lt;p&gt;記錄一下練習DP的過程，&lt;del&gt;沒偷懶的話&lt;/del&gt;打算一天至少一題，難度慢慢遞增。&lt;/p&gt;
 &lt;h2 id=&#34;luogu-p1077&#34;&gt;Luogu P1077&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1077&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
