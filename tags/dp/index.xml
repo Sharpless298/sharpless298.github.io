@@ -23,7 +23,7 @@
 &lt;h2 id=&#34;luogu-p1077&#34;&gt;Luogu P1077&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1077&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;想法&#34;&gt;想法&lt;/h3&gt;
-&lt;p&gt;定義 $dp[i][j]$ 為第 $i$ 種花放第 $j$ 個花盆的方法數，&lt;/p&gt;
+&lt;p&gt;定義 $dp[i][j]$ 為第 $i$ 種花放第 $j$ 個花盆的方法數。&lt;/p&gt;
 &lt;p&gt;轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$&lt;/p&gt;
 &lt;p&gt;時間複雜度 $\mathcal{O}(nma_i)$，空間複雜度 $\mathcal{O}(nm)$。&lt;/p&gt;
 &lt;h3 id=&#34;改進1&#34;&gt;改進1&lt;/h3&gt;
