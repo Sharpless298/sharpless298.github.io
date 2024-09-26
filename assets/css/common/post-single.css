@@ -95,7 +95,7 @@
 .post-content figure,
 .post-content ul {
     /*margin-bottom: var(--content-gap);*/
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .post-content ol,
