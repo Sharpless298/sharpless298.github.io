@@ -66,3 +66,17 @@ for(int k=1; k<=min(a[i], j); k++)
 轉移： $dp[i][j] = dp[i-1][(j-a[i]+K) \\% K]\ \ or \ \ dp[i-1][(j+a[i]+K) \\% K]$
 
 時間複雜度$\mathcal{O}(nk)$。
+
+## UVa 437
+
+[Link](http://domen111.github.io/UVa-Easy-Viewer/?437)
+
+### 觀察
+每塊積木可以重複使用，所以一塊積木可以分成六塊不同長寬高，並且觀察不難發現同一塊不可能使用兩次。
+
+### 做法
+當一塊小的積木能連到另一塊大的積木時，建一條有向邊從小的指向大的，會發現這是一張DAG，因此問題變成在DAG上面DP。
+
+時間複雜度$\mathcal{O}(n^2)$。
+
+[AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/437.cpp)
