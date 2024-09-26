@@ -15,7 +15,7 @@ tags = ["DP"]
 ### 想法
 定義 $dp[i][j]$ 為第 $i$ 種花放第 $j$ 個花盆的方法數。
 
-轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k] \quad 1\leq k\leq \min(a_i, j)$
+轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k], \quad 1\leq k\leq \min(a_i, j)$
 
 時間複雜度 $\mathcal{O}(nma_i)$，空間複雜度 $\mathcal{O}(nm)$。
 
@@ -75,8 +75,25 @@ for(int k=1; k<=min(a[i], j); k++)
 每塊積木可以重複使用，所以一塊積木可以分成六塊不同長寬高，並且觀察不難發現同一塊不可能使用兩次。
 
 ### 做法
-當一塊小的積木能連到另一塊大的積木時，建一條有向邊從小的指向大的，會發現這是一張DAG，因此問題變成在DAG上面DP。
+當一塊小的積木能連到另一塊大的積木時，建一條有向邊從小的指向大的，建完圖後會發現這是一張DAG，因此問題變成在DAG上面DP。
 
 時間複雜度$\mathcal{O}(n^2)$。
 
 [AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/437.cpp)
+
+## UVa 10739
+
+[Link](http://domen111.github.io/UVa-Easy-Viewer/?10739)
+
+定義 $dp[i][j]$ 為 區間$i$ 到 $j$ 所需花費的最小值
+
+轉移：
+
+$$dp[i][j] = \begin{cases} 
+            dp[i+1][j-1], & \text{if }s_i = s_j \\\\
+            \min(dp[i+1][j], dp[i][j-1], dp[i+1][j-1])+1, & \text{else}
+            \end{cases}$$
+
+時間複雜度$\mathcal{O}({\lvert s \rvert}^2)$
+
+[AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/10739.cpp)
