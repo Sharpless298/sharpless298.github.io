@@ -85,7 +85,7 @@ for(int k=1; k<=min(a[i], j); k++)
 
 [Link](http://domen111.github.io/UVa-Easy-Viewer/?10739)
 
-定義 $dp[i][j]$ 為 區間$i$ 到 $j$ 所需花費的最小值
+定義 $dp[i][j] 為區間 $i$ 到 $j$ 所需花費的最小值
 
 轉移：
 
