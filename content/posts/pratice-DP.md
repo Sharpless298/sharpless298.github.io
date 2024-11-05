@@ -12,7 +12,6 @@ tags = ["DP"]
 
 [Link](https://www.luogu.com.cn/problem/P1077)
 
-### 想法
 定義 $dp[i][j]$ 為第 $i$ 種花放第 $j$ 個花盆的方法數。
 
 轉移： $dp[i][j] = dp[i][j] + dp[i-1][j-k], \quad 1\leq k\leq \min(a_i, j)$
@@ -97,3 +96,17 @@ $$dp[i][j] = \begin{cases}
 時間複雜度$\mathcal{O}({\lvert s \rvert}^2)$
 
 [AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/10739.cpp)
+
+## AtCoder 369D
+
+[Link](https://atcoder.jp/contests/abc369/tasks/abc369_d)
+
+定義 $dp0,\ dp1$ 為當前偶數、奇數擊殺的經驗最大值。
+
+轉移：
+    $$dp0 = \max(dp0,\ dp1 + 2a_i)$$
+    $$dp1 = \max(dp1,\ dp0 + a_i)$$
+
+時間複雜度$\mathcal{O}(n)$
+
+[AC code](https://atcoder.jp/contests/abc369/submissions/59461888)
