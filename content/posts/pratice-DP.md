@@ -46,7 +46,7 @@ for(int k=1; k<=min(a[i], j); k++)
 
 定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。
 
-轉移：  
+轉移：
     $$\begin{align*}
     dp[a][b][c][d] = & \max \left( dp[a-1][b][c][d], \right. \\\\
                      & \quad \quad \ \ dp[a][b-1][c][d], \\\\
@@ -60,7 +60,7 @@ for(int k=1; k<=min(a[i], j); k++)
 
 [Link](http://domen111.github.io/UVa-Easy-Viewer/?10036)
 
-定義 $dp[i][j]$ 前 $i$ 個數字是否可以湊出餘數 $j$。
+定義 $dp[i][j]$ 前 $i$ 個數字是否可以湊出餘數 $j$ 。
 
 轉移： $dp[i][j] = dp[i-1][(j-a[i]+K) \\% K]\ \ or \ \ dp[i-1][(j+a[i]+K) \\% K]$
 
@@ -84,7 +84,7 @@ for(int k=1; k<=min(a[i], j); k++)
 
 [Link](http://domen111.github.io/UVa-Easy-Viewer/?10739)
 
-定義 $dp[i][j]$ 為區間 $i$ 到 $j$ 所需花費的最小值
+定義 $dp[i][j]$ 為區間 $i$ 到 $j$ 所需花費的最小值。
 
 轉移：
 
@@ -115,7 +115,7 @@ $$dp[i][j] = \begin{cases}
 
 經典約瑟夫問題
 
-定義 $dp[n] = m$ 為 $n$ 個人的時候倖存者為第 $m$ 個人
+定義 $dp[n] = m$ 為 $n$ 個人的時候倖存者為第 $m$ 個人。
 
 轉移： $dp[n] = (dp[n-1]+k) \\% n$
 
