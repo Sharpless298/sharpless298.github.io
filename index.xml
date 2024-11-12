@@ -42,7 +42,7 @@
 &lt;h2 id=&#34;luogu-p1541&#34;&gt;Luogu P1541&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1541&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;定義 $dp[a][b][c][d]$ 為選了a張爬行卡1，b張爬行卡2，c張爬行卡3，d張爬行卡4時的得分最大值。&lt;/p&gt;
-&lt;p&gt;轉移：&lt;br&gt;
+&lt;p&gt;轉移：
 $$\begin{align*}
 dp[a][b][c][d] = &amp;amp; \max \left( dp[a-1][b][c][d], \right. \\
 &amp;amp; \quad \quad \ \ dp[a][b-1][c][d], \\
