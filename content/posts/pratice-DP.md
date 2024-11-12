@@ -93,7 +93,7 @@ $$dp[i][j] = \begin{cases}
             \min(dp[i+1][j], dp[i][j-1], dp[i+1][j-1])+1, & \text{else}
             \end{cases}$$
 
-時間複雜度$\mathcal{O}({\lvert s \rvert}^2)$
+時間複雜度$\mathcal{O}({\lvert s \rvert}^2)$。
 
 [AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/10739.cpp)
 
@@ -107,6 +107,18 @@ $$dp[i][j] = \begin{cases}
     $$dp0 = \max(dp0,\ dp1 + 2a_i)$$
     $$dp1 = \max(dp1,\ dp0 + a_i)$$
 
-時間複雜度$\mathcal{O}(n)$
+時間複雜度$\mathcal{O}(n)$。
 
 [AC code](https://atcoder.jp/contests/abc369/submissions/59461888)
+
+## UVa 11351
+
+經典約瑟夫問題
+
+定義 $dp[n] = m$ 為 $n$ 個人的時候倖存者為第 $m$ 個人
+
+轉移： $dp[n] = (dp[n-1]+k) \\% n$
+
+時間複雜度$\mathcal{O}(n)$。
+
+[AC code](https://github.com/Sharpless298/CompetitiveProgramming/blob/main/UVa/11351.cpp)
