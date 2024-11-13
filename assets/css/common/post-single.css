@@ -34,7 +34,7 @@
 }
 
 .post-content {
-	font-size: 17px;
+	font-size: 16px;
     color: var(--content);
 }
 
@@ -61,11 +61,11 @@
 }
 
 .post-content h4 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .post-content h5 {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .post-content h6 {
