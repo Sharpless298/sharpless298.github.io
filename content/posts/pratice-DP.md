@@ -6,8 +6,6 @@ math = true
 tags = ["DP"]
 +++
 
-記錄一下練習DP的過程，~~沒偷懶的話~~打算一天至少一題，難度慢慢遞增。
-
 ## Luogu P1077
 
 [Link](https://www.luogu.com.cn/problem/P1077)
