@@ -9,3 +9,4 @@ math: true
 \LaTeX
 \\]
 $$\sum_{i=0}^n A_i = A_0 + A_1 + \cdots + A_n$$
+$$\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = \mathrm{e}$$
