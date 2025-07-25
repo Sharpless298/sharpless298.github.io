@@ -3,6 +3,7 @@ date: '2025-07-25T01:39:34+08:00'
 draft: false
 title: 'Test'
 math: true
+tags: ["test"]
 ---
 
 \\[
