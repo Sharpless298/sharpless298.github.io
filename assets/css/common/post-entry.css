@@ -5,7 +5,7 @@
     justify-content: center;
     min-height: 320px;
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 .first-entry .entry-header {
@@ -43,7 +43,7 @@
     transition: transform 0.1s;
     border: 1px solid var(--border);
     width: 720px;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .post-entry:active {
