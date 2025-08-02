@@ -1,7 +1,3 @@
-main div.post-content p {
-    font-size: 11pt;
-}
-
 .post-content h3::before {
   content: "# ";
   color: #52D7A9; 
@@ -9,6 +5,7 @@ main div.post-content p {
 }
 
 .post-content p {
+  font-size: 14px;
   line-height: 1.5;
   margin-top: 1.em;
   margin-bottom: 1em;
