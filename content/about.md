@@ -1,8 +1,7 @@
 ---
-title: "About"
+title: 'About'
+layout: about
+math: true
 ---
 
 測試
-
-你好
-
