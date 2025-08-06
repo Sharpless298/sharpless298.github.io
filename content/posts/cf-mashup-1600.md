@@ -29,7 +29,8 @@ math: true
 
 1. 整個數列只有 $\\{0, 1\\}$ 或 $\\{1, 2\\}$，會交換 $\min(cnt_0, cnt_1)$ 或 $\min(cnt_1, cnt_2)$ 次。
 2. 區間 $[0, cnt_0)$ 都是 $1$，會交換 $cnt_0$ 次，$[cnt_0, n)$ 會交換 $\min(cnt_1, cnt_2)$ 次，總共 $cnt_0 + \min(cnt_1, cnt_2)$ 次。
-3. 區間 $[0, cnt_0)$ 都是 $2$，會交換 $2cnt_0$ 次，且除了第一次交換，每次都必定會有一個 $2$ 被交換至 $[cnt_0+cnt_1, n)$ 之間，因此 $[cnt_0, n)$ 會交換 $cnt_2-(cnt_0-1)$ 次，總共 $cnt_0 + cnt_2 + 1$ 次，題目保證 $cnt_1 \geq 1$，因此 $cnt_0 + cnt_2 + 1 \leq n$。
+3. 區間 $[0, cnt_0)$ 都是 $2$，會交換 $2cnt_0$ 次，且除了第一次交換，每次都必定會有一個 $2$ 被交換至 $[cnt_0+cnt_1, n)$ 之間，因此 $[cnt_0, n)$ 會交換 $cnt_2-(cnt_0-1)$ 次，總共 $cnt_0 + cnt_2 + 1$ 次，題目保證 $cnt_1 \geq 1$，  
+因此 $cnt_0 + cnt_2 + 1 \leq n$。
 4. 顯然其他情況不會比 3. 更糟。
 
 時間複雜度 $O(n)$ 。
@@ -41,7 +42,7 @@ math: true
 ### Description
 [Link](https://codeforces.com/contest/1766/my)
 
-有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,(x+2,y+2),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，若 $k$ 為 $\infty$ 則輸出 $-1$ 。
+有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，若 $k$ 為 $\infty$ 則輸出 $-1$ 。
 
 #### Constraints
 - $1\\leq n \\leq 10^6$
@@ -49,11 +50,10 @@ math: true
 
 ### Solution
 觀察一下不難發現：
-- 當 $x=y \\implies k = 0$
-- 當 $x=y-1 \\implies k = \infty$
+- $x=y \\implies k = 0$
+- $x=y-1 \\implies k = \infty$
 
-對於剩下的情況，我們先將數對 $(x,y)$ 兩邊減去 $x$ 變成 $(0, y-x)$ ，此時問題變成：$\\\\$ **找到一個最小的正整數 $\\bm{z \\geq x}$ 使得 $\\bm{\\gcd(z, y-x+z) \neq 1}$**
-
+對於 $x < y - 1$ 的情況，我們先將數對 $(x,y)$ 兩邊減去 $x$ 變成 $(0, y-x)$ ，此時問題變成：<div style="text-align: center; font-size: 15px;"><strong>找到一個最小的正整數 $\bm{z \geq x}$ 使得 $\bm{\gcd(z, y-x+z) \neq 1}$</strong></div>
 
 假設 $y-x$ 有 $c$ 個相異質因數 $p_i$ ，$\\forall i \in [1, c]$
 $$y-x = p_1 p_2 \dots p_c$$
