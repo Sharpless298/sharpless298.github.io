@@ -10,7 +10,7 @@ math: true
 ### Description
 [Link](https://codeforces.com/problemset/problem/2034/D)
 
-給一個長度 $n$ 的數列 $A$ 且 $A_i \in \\{0, 1, 2\\}$ ，你可以交換兩個差值為 $1$ 的數，求不超過 $n$ 次的交換方法使得它為遞增數列，題目保證至少出現一個 $1$ 。
+給一個長度 $n$ 的數列 $a$ 且 $a_i \in \\{0, 1, 2\\}$ ，你可以交換兩個差值為 $1$ 的數，求不超過 $n$ 次的交換方法使得它為遞增數列，題目保證至少出現一個 $1$ 。
 
 #### Constraints
 - $1 \\leq \\sum n \\leq 2 \cdot 10^5$
@@ -19,9 +19,9 @@ math: true
 定義 $cnt_0,\ cnt_1,\ cnt_2$ 分別為 $0, 1, 2$ 的個數。
 
 一個遞增數列的 $[0, cnt_0)$ 區間必定都是 $0$ ，先考慮把這個區間的數都換成 $0$ ，$\\forall i \in [0, cnt_0)$。
-- $A_i = 0$ : 不動作。
-- $A_i = 1$ : 找最右邊 $0$ 交換。
-- $A_i = 2$ : 先找最右邊的 $1$ 交換， 再找最右邊的 $0$ 交換。
+- $a_i = 0$ : 不動作。
+- $a_i = 1$ : 找最右邊 $0$ 交換。
+- $a_i = 2$ : 先找最右邊的 $1$ 交換， 再找最右邊的 $0$ 交換。
 
 最後再排序 $[cnt_0, n)$。
 
@@ -40,7 +40,7 @@ math: true
 ## CF 1766D
 
 ### Description
-[Link](https://codeforces.com/contest/1766/my)
+[Link](https://codeforces.com/contest/1766/problem/D)
 
 有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，若 $k$ 為 $\infty$ 則輸出 $-1$ 。
 
@@ -50,22 +50,48 @@ math: true
 
 ### Solution
 觀察一下不難發現：
-- $x=y \\implies k = 0$
-- $x=y-1 \\implies k = \infty$
+- $x=y \\Rightarrow k = 0$
+- $x=y-1 \\Rightarrow k = \infty$
 
 對於 $x < y - 1$ 的情況，我們先將數對 $(x,y)$ 兩邊減去 $x$ 變成 $(0, y-x)$ ，此時問題變成：<div style="text-align: center; font-size: 15px;"><strong>找到一個最小的正整數 $\bm{z \geq x}$ 使得 $\bm{\gcd(z, y-x+z) \neq 1}$</strong></div>
 
 假設 $y-x$ 有 $c$ 個相異質因數 $p_i$ ，$\\forall i \in [1, c]$
 $$y-x = p_1 p_2 \dots p_c$$
 
-觀察可發現 $p_i\\mid z \\implies \\gcd(z, y-x+z) \neq 1$ ，因此存在一個最小的正整數 $m_i$ 使得 $p_i m_i \geq x$ ，找到最小的 $p_i m_i - x$ 就是答案。
+觀察可發現 $p_i\\mid z \\Rightarrow \\gcd(z, y-x+z) \neq 1$ ，因此存在一個最小的正整數 $m_i$ 使得 $p_i m_i \geq x$ ，找到最小的 $p_i m_i - x$ 就是答案。
 
 令 $N$ 為 $(y - x)$ 的最大值，利用線性篩可以紀錄最小質因數達到 $O(\log N)$ 分解質因數，時間複雜度 $O(n \log N)$ 。
 
 [AC Code](https://codeforces.com/contest/1766/submission/332299877)
 
-## CF 2103C
 ## CF 1857F
+### Description
+[Link](https://codeforces.com/problemset/problem/1857/F)
+
+### Solution
+$$
+\\begin{align}
+a_i + a_j = x \\\\
+a_i \\times a_j = y
+\\end{align}
+$$
+由 $(1)$ 得 $a_j = x - a_i$ 代入 $(2)$
+$$
+\\begin{aligned}
+&{a_j}^2-xa_i+y=0 \\\\[0.6em]
+\\Rightarrow\\,&a_j = \\frac{x \\pm \\sqrt{x^2-4y}}{2} \\\\
+\\Rightarrow\\,&a_i = x - a_j
+\\end{aligned}
+$$
+
+只有當 $x^2-4y>=0$ 才有實數解，再檢查 $x^2-4y$ 為完全平方數 且 $\\frac{x \\pm \\sqrt{x^2-4y}}{2}$ 必須是偶數。
+
+當 $a_i \neq a_j$ ，答案為 $a_i, a_j$ 個數相乘；當 $a_i = a_j$ ，假設個數為 $k$ ，答案為 $\\binom{k}{2}$ 。
+
+時間複雜度 $O(q \\log n)$。
+
+[AC Code](https://codeforces.com/contest/1857/submission/332627790)
+
 ## CF 1680C
 ## CF 1703G
 ## CF 1843E
