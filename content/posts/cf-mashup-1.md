@@ -72,7 +72,7 @@ $$y-x = p_1 p_2 \dots p_c$$
 $$
 \\begin{align}
 a_i + a_j = x \\\\
-a_i \\times a_j = y
+a_i \\cdot a_j = y
 \\end{align}
 $$
 由 $(1)$ 得 $a_j = x - a_i$ 代入 $(2)$
@@ -84,15 +84,18 @@ $$
 \\end{aligned}
 $$
 
-只有當 $x^2-4y>=0$ 才有實數解，再檢查 $x^2-4y$ 為完全平方數 且 $\\frac{x \\pm \\sqrt{x^2-4y}}{2}$ 必須是偶數。
+只有當 $x^2-4y \\geq 0$ 才有實數解，再檢查 $x^2-4y$ 為完全平方數 且 $\\frac{x \\pm \\sqrt{x^2-4y}}{2}$ 必須是偶數，只要有一個條件不滿足則答案為 $0$ 。
 
-當 $a_i \neq a_j$ ，答案為 $a_i, a_j$ 個數相乘；當 $a_i = a_j$ ，假設個數為 $k$ ，答案為 $\\binom{k}{2}$ 。
+當 $a_i \neq a_j$ ，答案為 $a_i$ 和 $a_j$ 個數相乘；當 $a_i = a_j$ ，假設個數為 $k$ ，答案為 $\\binom{k}{2}$ 。
 
 時間複雜度 $O(q \\log n)$。
 
 [AC Code](https://codeforces.com/contest/1857/submission/332627790)
 
 ## CF 1680C
+### Description
+[Link](https://codeforces.com/problemset/problem/1680/C)
+
 ## CF 1703G
 ## CF 1843E
 ## CF 1779C
