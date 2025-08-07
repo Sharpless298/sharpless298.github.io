@@ -42,7 +42,8 @@ math: true
 ### Description
 [Link](https://codeforces.com/contest/1766/problem/D)
 
-有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，若 $k$ 為 $\infty$ 則輸出 $-1$ 。
+有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，  
+若 $k$ 為 $\infty$ 則輸出 $-1$ 。
 
 #### Constraints
 - $1\\leq n \\leq 10^6$
@@ -58,7 +59,7 @@ math: true
 假設 $y-x$ 有 $c$ 個相異質因數 $p_i$ ，$\\forall i \in [1, c]$
 $$y-x = p_1 p_2 \dots p_c$$
 
-觀察可發現 $p_i\\mid z \\Rightarrow \\gcd(z, y-x+z) \neq 1$ ，因此存在一個最小的正整數 $m_i$ 使得 $p_i m_i \geq x$ ，找到最小的 $p_i m_i - x$ 就是答案。
+觀察可發現 $\\gcd(z, y-x+z) \neq 1 \\Rightarrow$ $(y-x)$ 至少有一個質因數整除 $z$，因此對於 $p_i$ ，存在一個最小的正整數 $m_i$ 使得 $p_i m_i \geq x$ ，找到最小的$p_i m_i - x$ 就是答案。
 
 令 $N$ 為 $(y - x)$ 的最大值，利用線性篩可以紀錄最小質因數達到 $O(\log N)$ 分解質因數，時間複雜度 $O(n \log N)$ 。
 
@@ -95,6 +96,16 @@ $$
 ## CF 1680C
 ### Description
 [Link](https://codeforces.com/problemset/problem/1680/C)
+
+### Solution
+定義 $p_0$ 和 $p_1$ 為 $0$ 和 $1$ 的個數前綴和，以下都是左閉右開區間。
+
+使用雙指標，$[l, r)$ 表示沒被刪除的區間，對於每一個 $l$ 只要滿足 $p_0(r)-p_0(l) < p_1(l)+p_1(n)-p_1(r)$ ，就右移 $r$ ，答案為 $\\max(p_0(r)-p_0(l),\\, p_1(l)+p_1(n)-p_1(r))$ 的最小值。
+
+時間複雜度 $O(n)$。
+
+[AC Code](https://codeforces.com/contest/1680/submission/332749464)
+
 
 ## CF 1703G
 ## CF 1843E
