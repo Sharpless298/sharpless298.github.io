@@ -100,15 +100,30 @@ $$
 ### Solution
 定義 $p_0$ 和 $p_1$ 為 $0$ 和 $1$ 的個數前綴和，以下都是左閉右開區間。
 
-使用雙指標，$[l, r)$ 表示沒被刪除的區間，對於每一個 $l$ 只要滿足 $p_0(r)-p_0(l) < p_1(l)+p_1(n)-p_1(r)$ ，就右移 $r$ ，答案為 $\\max(p_0(r)-p_0(l),\\, p_1(l)+p_1(n)-p_1(r))$ 的最小值。
+使用雙指標，$[l, r)$ 表示沒被刪除的區間，對於每一個 $l$ 只要滿足 $p_0(r)-p_0(l) < p_1(l)+p_1(n)-p_1(r)$ ，就不斷右移 $r$ ，答案為 $\\max(p_0(r)-p_0(l),\\, p_1(l)+p_1(n)-p_1(r))$ 的最小值。
 
 時間複雜度 $O(n)$。
 
 [AC Code](https://codeforces.com/contest/1680/submission/332749464)
 
-
-## CF 1703G
 ## CF 1843E
-## CF 1779C
-## CF 2048D
-## CF 1861C
+### Description
+[Link](https://codeforces.com/problemset/problem/1843/E)
+
+有一個長度 $n$ 且全為 $0$ 的數列 $a$，給你 $m$ 個區間 $(l_i, r_i)$， $1 \\leq i \\leq m$ ， $1 \\leq l_i \\leq r_i \\leq n$ ，有 $q$ 筆有序修改 $x_j$，  
+修改 $a_{x_j}$ 為 $1$ ， $1\\leq j \\leq q$ ， $1 \\leq x_j \\leq n$，求至少要前幾項修改才能滿足至少有一個區間的 $1$ 的個數嚴格大於 $0$ 的個數，無解輸出 $-1$ 。
+
+#### Constraints
+- $1 \\leq \\sum n \\leq 10^5$
+- $1 \\leq m \\leq n \\leq 10^5$
+- $1\\leq q\\leq n$
+
+### Solution
+定義 $cnt_0$ 和 $cnt_1$ 為 $0$ 和 $1$ 的個數。
+
+觀察到當前 $k$ 項為滿足 $cnt_1 > cnt_0$ 時， 前 $k + 1$ 項也會滿足；相反地，前 $k$ 項不滿足時，前 $k - 1$ 項也會不滿足。  
+因此我們可以對 $k$ 二分搜，每次 $O(n)$ 修改並計算 $1$ 的前綴和，再 $O(m)$ 檢查每個區間有沒有滿足。
+
+時間複雜度 $O((m+n)\\log q)$ 。
+
+[AC Code](https://codeforces.com/contest/1843/submission/332966958)
