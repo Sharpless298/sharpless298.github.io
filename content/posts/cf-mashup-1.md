@@ -45,7 +45,9 @@ math: true
 ### Description
 [Link](https://codeforces.com/contest/1766/problem/D)
 
-有 $n$ 筆詢問，給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，  
+有 $n$ 筆詢問。
+
+給定 $x, y \in \mathbb{N}$ ，找到最大的 $k$ 使得 $(x,y),\\,(x+1,y+1),\\,\\dots ,\\,(x+k-1, y+k-1)$ 皆為互質，  
 若 $k$ 為 $\infty$ 則輸出 $-1$ 。
 
 #### Constraints
