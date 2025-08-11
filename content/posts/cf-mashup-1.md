@@ -10,9 +10,12 @@ math: true
 ### Description
 [Link](https://codeforces.com/problemset/problem/2034/D)
 
+有 $t$ 筆測資。
+
 給一個長度 $n$ 的數列 $a$ 且 $a_i \in \\{0, 1, 2\\}$ ，你可以交換兩個差值為 $1$ 的數，求不超過 $n$ 次的交換方法使得它為遞增數列，題目保證至少出現一個 $1$ 。
 
 #### Constraints
+- $1\\leq t \\leq 3000$
 - $1 \\leq \\sum n \\leq 2 \cdot 10^5$
 
 ### Solution
@@ -112,13 +115,16 @@ $a_i$, $a_j$有解的話要符合：
 ### Description
 [Link](https://codeforces.com/problemset/problem/1843/E)
 
+有 $t$ 筆測資。
+
 有一個長度 $n$ 且全為 $0$ 的數列 $a$，給你 $m$ 個區間 $(l_i, r_i)$， $1 \\leq i \\leq m$ ， $1 \\leq l_i \\leq r_i \\leq n$ ，有 $q$ 筆有序修改 $x_j$，  
 修改 $a_{x_j}$ 為 $1$ ， $1\\leq j \\leq q$ ， $1 \\leq x_j \\leq n$，求至少要前幾項修改才能滿足至少有一個區間的 $1$ 的個數嚴格大於 $0$ 的個數，無解輸出 $-1$ 。
 
 #### Constraints
+- $1 \\leq t \\leq 10^4$
 - $1 \\leq \\sum n \\leq 10^5$
 - $1 \\leq m \\leq n \\leq 10^5$
-- $1\\leq q\\leq n$
+- $1 \\leq q \\leq n$
 
 ### Solution
 定義 $cnt_0$ 和 $cnt_1$ 為 $0$ 和 $1$ 的個數。
