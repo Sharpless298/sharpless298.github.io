@@ -30,8 +30,8 @@ a_2 \\neq \\gcd(a_2, a_j), & j \\text{ is even}
 - $j$ 是奇數：因為前面已經假設 $a_1$ 不會整除其他數，它自然也不會是其他兩數的最大公因數，所以這條式子成立。
 - $j$ 是偶數：同樣可得 $a_2 \\neq \\gcd(a_2,a_j) \\iff a_2 \\nmid a_j$
 
-到這邊可以推出我們要的結論了：
-$$\\forall\\, i \\in [1,n],\\;\\forall\\, j \\in (i,n],\\;\\forall\\, k \\in [2,\\left\\lfloor \\frac{n}{i} \\right\\rfloor] \\quad a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
+到這邊可以推出我們要的結論了，$\\forall\\, i \\in [1,n],\\;\\forall\\, j \\in (i,n],\\;\\forall\\, k \\in [2,\\left\\lfloor \\frac{n}{i} \\right\\rfloor]$
+$$a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 
 怎麼滿足不整除的部份？其實很簡單，**一個數不能整除比他小的數**，又題目剛好要求字典序最大：
 - $a_1=\\max(S)$
