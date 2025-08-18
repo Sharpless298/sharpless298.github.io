@@ -30,11 +30,11 @@ a_2 \\neq \\gcd(a_2, a_j), & j \\text{ is even.}
 - 當 $j$ 是奇數：因為前面已經假設 $a_1$ 不會整除其他數，它自然也不會是其他兩數的最大公因數，所以這條式子成立。
 - 當 $j$ 是偶數：同樣可得 $a_2 \\neq \\gcd(a_2,a_j) \\iff a_2 \\nmid a_j$
 
-接著再假設 $a_2 \\nmid a_j$ ，這樣推下去可以得到一個結論：
+接著再假設 $a_2 \\nmid a_j$ ，推 $i=3,\\;\\forall j \\in [4,n]$ 的情況，這樣不斷推下去可以得到一個結論：
 $$\\forall\\, i \\in [1,n],\\;\\forall\\, j \\in (i,n],\\;\\forall\\, k \\in [2,\\left\\lfloor \\frac{n}{i} \\right\\rfloor] \\quad
 a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 
-以下令題目給定的集合 $S = \\{ s_1, s_2, \\dots, s_m \\}, \\quad s_1 < s_2 < \\cdots < s_m$
+令題目給定的集合 $S = \\{ s_1, s_2, \\dots, s_m \\}, \\quad s_1 < s_2 < \\cdots < s_m$
 
 結論有了，怎麼構造？其實很簡單，**一個數不能整除比他小的數**，題目又剛好要求字典序最大，因此考慮以下構造方式：
 - $a_1=s_m$
