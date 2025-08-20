@@ -44,19 +44,20 @@ a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 
 [AC Code](https://codeforces.com/contest/2039/submission/333991898)
 
-## CF 2030D
-### Description
-[Link](https://codeforces.com/problemset/problem/2030/D)
-
-## CF 1626C
-### Description
-[Link](https://codeforces.com/problemset/problem/1626/C)
-
 ## CF 2112D
 ### Description
 [Link](https://codeforces.com/problemset/problem/2112/D)
 
-## CF 1798C
-### Description
-[Link](https://codeforces.com/problemset/problem/1798/C)
+### Solution
+#### 觀察
+- $n = 2$ 無解
+- $u \\rightarrow v \\rightarrow w$ 有 $3$ 個 good pair
+- $v_1\\rightarrow v_2 \\leftarrow v_3 \\rightarrow \\dots \\leftarrow v_k$ 有 $k-1$ 個 good pair
 
+
+找到一個度數為 $2$ 的節點 $v$ ，假設 $v$ 相鄰的節點為 $v, w$ ，就像觀察二一樣構造 $u \\rightarrow v \\rightarrow w$ ，剩下的點就像觀察三一樣接上去就好，參考下圖
+{{< figure align=center src="graph.png" width="300">}}  
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/2112/submission/334600976)
