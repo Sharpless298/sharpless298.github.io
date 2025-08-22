@@ -61,3 +61,14 @@ a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/2112/submission/334600976)
+
+## CF 1975D
+### Description
+[Link](https://codeforces.com/contest/1975/problem/D)
+
+### Solution
+先找到最先被染色成藍色的點，假設為 $v$ 且所有的點中與 $v$ 的最遠距離為 $d$ ，答案為 $dis(b, v) + 2(n-1) - d$ 。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1975/problem/D)
