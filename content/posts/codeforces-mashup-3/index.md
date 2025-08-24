@@ -34,9 +34,9 @@ a_2 \\neq \\gcd(a_2, a_j), & j \\text{ is even.}
 $$\\forall\\, i \\in [1,n],\\;\\forall\\, j \\in (i,n],\\;\\forall\\, k \\in [2,\\left\\lfloor \\frac{n}{i} \\right\\rfloor] \\quad
 a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 
-令題目給定的集合 $S = \\{ s_1, s_2, \\dots, s_m \\}, \\quad s_1 < s_2 < \\cdots < s_m$
 
 結論有了，怎麼構造？其實很簡單，**一個數不能整除比他小的數**，題目又剛好要求字典序最大，因此考慮以下構造方式：
+- 令題目給定的集合 $S = \\{ s_1, s_2, \\dots, s_m \\}, \\quad s_1 < s_2 < \\cdots < s_m$
 - $a_1=s_m$
 - 對於 $i \\geq 2$ ，設 \\(a_j = \\min \\{ a_k : k \\mid i,\\, k \\neq i \\}\\) ，若 $a_j$ 為 $s_t$， 則令 $a_i$ 為 $s_{t-1}$；若 $t=1$ 則無解。
 
@@ -52,6 +52,7 @@ a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 #### 觀察
 - $n = 2$ 無解
 - $u \\rightarrow v \\rightarrow w$ 有 $3$ 個 good pair
+- $v_1 \\rightarrow v_2 \\rightarrow \\cdots \\rightarrow v_k$ ， $k$ 不可能大於 $3$ 。
 - $v_1\\rightarrow v_2 \\leftarrow v_3 \\rightarrow \\dots \\leftarrow v_k$ 有 $k-1$ 個 good pair
 
 
@@ -67,7 +68,9 @@ a_i\\neq \\gcd(a_i,a_j) \\iff a_i \\nmid a_{ki}$$
 [Link](https://codeforces.com/contest/1975/problem/D)
 
 ### Solution
-先找到最先被染色成藍色的點，假設為 $v$ 且所有的點中與 $v$ 的最遠距離為 $d$ ，答案為 $dis(b, v) + 2(n-1) - d$ 。
+#### 觀察
+- $P_A,\\,P_B$ 亂逛是沒有用的，應該先找到最先被染色成藍色的點，假設為 $v$ 。
+- 假設所有的點中與 $v$ 的最遠距離為 $d$ ，答案為 $dis(b, v) + 2(n-1) - d$ 。
 
 時間複雜度 $O(n)$ 。
 
