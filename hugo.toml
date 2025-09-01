@@ -1,0 +1,40 @@
+baseURL = "https://sharpless298.github.io/"
+title = "Sharpless298's Blog"
+# canonifyurls = true
+languagecode = "zh-TW"
+theme = "supremum"
+
+enableEmoji = true
+hasCJKLanguage = true
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+# put files to ignore here, like "\\.md"
+ignoreFiles = []
+
+[sitemap]
+  changefreq = "always"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[markup]
+  # defaultMarkdownHandler = "blackfriday"
+  # [markup.blackfriday]
+    # extensions = ["hardLineBreak"]
+  # defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = true
+
+
+[[menu.primary]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.primary]]
+    name = "About"
+    url = "/about/"
+    weight = 2

@@ -1,0 +1,3 @@
+[submodule "themes/supremum"]
+	path = themes/supremum
+	url = git@github.com:Sharpless298/supremum.git
