@@ -16,9 +16,9 @@ katex = true
 
 一個遞增數列的 $\[0, cnt\_0)$ 區間必定都是 $0$ ， 先考慮把這個區間的數都換成 $0$ ，以下 $\\forall i \\in \[0, cnt\_0)$。
 
-*   $a\_i = 0$ : 不動作。
-*   $a\_i = 1$ : 找最右邊 $0$ 交換。
-*   $a\_i = 2$ : 先找最右邊的 $1$ 交換， 再找最右邊的 $0$ 交換。
+*   $a\_i = 0:$ 不動作。
+*   $a\_i = 1:$ 找最右邊 $0$ 交換。
+*   $a\_i = 2:$ 先找最右邊的 $1$ 交換， 再找最右邊的 $0$ 交換。
 
 最後再排序 $\[cnt\_0, n)$。
 
@@ -26,8 +26,8 @@ katex = true
 
 1.  整個數列只有 $\\{0, 1\\}$ 或 $\\{1, 2\\}$，會交換 $\\min(cnt\_0, cnt\_1)$ 或 $\\min(cnt\_1, cnt\_2)$ 次。
 2.  區間 $\[0, cnt\_0)$ 都是 $1$，會交換 $cnt\_0$ 次，$\[cnt\_0, n)$ 會交換 $\\min(cnt\_1, cnt\_2)$ 次，總共 $cnt\_0 + \\min(cnt\_1, cnt\_2)$ 次。
-3.  區間 $\[0, cnt\_0)$ 都是 $2$，會交換 $2cnt\_0$ 次，且除了第一次交換，每次都必定會有一個 $2$ 被交換至 $\[cnt\_0+cnt\_1, n)$ 之間，因此 $\[cnt\_0, n)$ 會交換 $cnt\_2-(cnt\_0-1)$ 次，總共 $cnt\_0 + cnt\_2 + 1$ 次，題目保證 $cnt\_1 \\geq 1$，  
-    因此 $cnt\_0 + cnt\_2 + 1 \\leq n$。
+3.  區間 $\[0, cnt\_0)$ 都是 $2$，會交換 $2cnt\_0$ 次，且除了第一次交換，每次都必定會有一個 $2$ 被交換至 $\[cnt\_0+cnt\_1, n)$ 之間，因此 $\[cnt\_0, n)$ 會交換 $cnt\_2-(cnt\_0-1)$ 次，總共 $cnt\_0 + cnt\_2 + 1$ 次，題目保證  
+$cnt\_1 \\geq 1$ ，因此 $cnt\_0 + cnt\_2 + 1 \\leq n$。
 4.  顯然其他情況不會比 3. 更糟。
 
 時間複雜度 $O(n)$ 。
@@ -41,20 +41,24 @@ katex = true
 
 ### Solution
 
-觀察一下不難發現：
+觀察一下不難發現 ：
 
 *   $x=y \\Rightarrow k = 0$
 *   $x=y-1 \\Rightarrow k = \\infty$
 
-對於 $x < y - 1$ 的情況，我們先將數對 $(x,y)$ 兩邊減去 $x$ 變成 $(0, y-x)$ ，此時問題變成：
+對於 $x < y - 1$ 的情況，我們先將數對 $(x,y)$ 兩邊減去 $x$ 變成 $(0, y-x)$ ，此時問題變成 ：
 
-**找到一個最小的正整數 $\\bm{z \\geq x}$ 使得 $\\bm{\\gcd(z, y-x+z) \\neq 1}$**
+<p style="text-align: center; font-weight: bold;">
+找到一個最小的正整數 $\bm{z \geq x}$ 使得 $\bm{\gcd(z, y-x+z) \neq 1}$
+</p>
 
-假設 $y-x$ 有 $c$ 個相異質因數 $p\_i$ ，$i \\in \[1, c\]$ $$y-x = p\_1 p\_2 \\dots p\_c$$
+假設 $y-x$ 有 $c$ 個相異質因數 $p\_i,\\;i \\in \[1, c\]$ $$y-x = p\_1 p\_2 \\dots p\_c$$
 
 觀察可發現 $\\gcd(z, y-x+z) \\neq 1 \\Rightarrow$ $(y-x)$ 至少有一個質因數整除 $z$，因此對於每一個 $(y-x)$ 的質因數 ，皆存在一個最小的正整數 $m\_i$ 使得 $p\_i m\_i \\geq x$ ，找到最小的 $p\_i m\_i - x$ 就是答案。
 
-令 $N$ 為 $(y - x)$ 的最大值，利用線性篩可以紀錄最小質因數達到 $O(\\log N)$ 分解質因數，時間複雜度 $O(n \\log N)$ 。
+令 $N$ 為 $(y - x)$ 的最大值，利用線性篩可以紀錄最小質因數達到 $O(\\log N)$ 分解質因數。
+
+時間複雜度 $O(n \\log N)$ 。
 
 [AC Code](https://codeforces.com/contest/1766/submission/332299877)
 
@@ -65,7 +69,7 @@ katex = true
 
 ### Solution
 
-$$ \\begin{align} a\_i + a\_j = x \\\\ a\_i \\cdot a\_j = y \\end{align} $$ 由 $(1)$ 得 $a\_j = x - a\_i$ 代入 $(2)$ $$ \\begin{aligned} &{a\_j}^2-xa\_i+y=0 \\\\\[0.6em\] \\Rightarrow\\,&a\_j = \\frac{x \\pm \\sqrt{x^2-4y}}{2} \\\\ \\Rightarrow\\,&a\_i = x - a\_j \\end{aligned} $$
+$$ \\begin{align} a\_i + a\_j = x \\\\ a\_i \\cdot a\_j = y \\end{align} $$ 由 $(1)$ 得 $a\_j = x - a\_i$ 代入 $(2)$ $$ \\begin{aligned} &{a\_j}^2-xa\_i+y=0 \\\\\[0.6em\] \\Rightarrow\\;&a\_j = \\frac{x \\pm \\sqrt{x^2-4y}}{2} \\\\ \\Rightarrow\\;&a\_i = x - a\_j \\end{aligned} $$
 
 $a\_i$, $a\_j$有解的話要符合：
 
