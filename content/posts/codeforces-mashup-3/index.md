@@ -21,11 +21,11 @@ CF 2039D
 當 $i=2,\\; \\forall j \\in \[3,n\] :$ \\\[ a\_{\\gcd(2,j)} = \\begin{cases} a\_1 \\neq \\gcd(a\_2, a\_j), & j \\text{ is odd.} \\\\ a\_2 \\neq \\gcd(a\_2, a\_j), & j \\text{ is even.} \\end{cases} \\\]
 
 *   當 $j$ 是奇數 ： 因為前面已經假設 $a\_1$ 不會整除其他數，它自然也不會是其他兩數的最大公因數，所以這條式子成立。
-*   當 $j$ 是偶數 ： 同樣可得 $a\_2 \\neq \\gcd(a\_2,a\_j) \\iff a\_2 \\nmid a\_j$
+*   當 $j$ 是偶數 ： 同樣可得 $a\_2 \\neq \\gcd(a\_2,a\_j) \\iff a\_2 \\nmid a\_j$ 。
 
 接著再假設 $a\_2 \\nmid a\_j$ ，推 $i=3,\\;\\forall j \\in \[4,n\]$ 的情況，這樣不斷推下去可以得到一個結論： $$\\forall\\, i \\in \[1,n\],\\;\\forall\\, j \\in (i,n\],\\;\\forall\\, k \\in \[2,\\left\\lfloor \\frac{n}{i} \\right\\rfloor\] \\quad a\_i\\neq \\gcd(a\_i,a\_j) \\iff a\_i \\nmid a\_{ki}$$
 
-結論有了，怎麼構造 ？ 其實很簡單，**一個數不能整除比他小的數**，題目又剛好要求字典序最大，因此考慮以下構造方式 ：
+結論有了，怎麼構造？ 其實很簡單，**一個數不能整除比他小的數**，題目又剛好要求字典序最大，因此考慮以下構造方式 ：
 
 *   令題目給定的集合 $S = \\{ s\_1, s\_2, \\dots, s\_m \\}, \\quad s\_1 < s\_2 < \\cdots < s\_m$
 *   $a\_1=s\_m$

@@ -5,9 +5,7 @@ title = 'Codeforces Mashup 2'
 katex = true
 +++
 
-CF 2117E
---------
-
+## CF 2117E
 ### Description
 
 [Link](https://codeforces.com/problemset/problem/2117/E)
@@ -20,14 +18,14 @@ CF 2117E
 
 我的 code 有點醜就不放了，看官解就好。
 
-CF 1917C
---------
-
+## CF 1917C
 ### Description
 
 [Link](https://codeforces.com/contest/1917/problem/C)
 
 ### Solution
+
+以下用 (1) (2) 分別代表第一個和第二個操作。
 
 先考慮當數列 $a$ 重置為 $0$ 的情況，觀察發現不管選幾次 (1)， $a\_j = j$ 的個數只會小於等於 $1$ ，因此只要 (1) (2) (1) (2) 這樣交替下去就會得到最大分數，假設有 $w$ 天則可以得到 $\\left\\lfloor \\frac{w}{2} \\right\\rfloor$ 的分數。
 
@@ -37,9 +35,7 @@ CF 1917C
 
 [AC Code](https://codeforces.com/contest/1917/submission/333519011)
 
-CF 1671D
---------
-
+## CF 1671D
 ### Description
 
 [Link](https://codeforces.com/problemset/problem/1671/D)
@@ -59,9 +55,7 @@ CF 1671D
 
 [AC Code](https://codeforces.com/contest/1671/submission/333668690)
 
-CF 1899F
---------
-
+## CF 1899F
 ### Description
 
 [Link](https://codeforces.com/problemset/problem/1899/F)
@@ -74,9 +68,7 @@ $(x,y)$ 表示節點 $x$ 和節點 $y$ 之間有一個邊，考慮以下構造�
 
 [AC Code](https://codeforces.com/contest/1899/submission/333784568)
 
-CF 2051E
---------
-
+## CF 2051E
 ### Description
 
 [Link](https://codeforces.com/contest/2051/problem/E)
