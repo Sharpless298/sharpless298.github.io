@@ -5,9 +5,7 @@ title = 'Codeforces Mashup 3'
 katex = true
 +++
 
-CF 2039D
---------
-
+## CF 2039D
 ### Description
 
 [Link](https://codeforces.com/problemset/problem/2039/D)
@@ -35,9 +33,7 @@ CF 2039D
 
 [AC Code](https://codeforces.com/contest/2039/submission/333991898)
 
-CF 2112D
---------
-
+## CF 2112D
 ### Description
 
 [Link](https://codeforces.com/problemset/problem/2112/D)
@@ -48,7 +44,6 @@ CF 2112D
 
 *   $n = 2$ 無解
 *   $u \\rightarrow v \\rightarrow w$ 有 $3$ 個 good pair
-*   $v\_1 \\rightarrow v\_2 \\rightarrow \\cdots \\rightarrow v\_k$ ， $k$ 不可能大於 $3$ 。
 *   $v\_1\\rightarrow v\_2 \\leftarrow v\_3 \\rightarrow \\dots \\leftarrow v\_k$ 有 $k-1$ 個 good pair
 
 找到一個度數為 $2$ 的節點 $v$ ，假設 $v$ 相鄰的節點為 $v, w$ ，就像觀察二一樣構造 $u \\rightarrow v \\rightarrow w$ ，剩下的點就像觀察三一樣接上去就好，參考下圖
@@ -59,9 +54,7 @@ CF 2112D
 
 [AC Code](https://codeforces.com/contest/2112/submission/334600976)
 
-CF 1975D
---------
-
+## CF 1975D
 ### Description
 
 [Link](https://codeforces.com/contest/1975/problem/D)
@@ -76,3 +69,31 @@ CF 1975D
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/1975/problem/D)
+
+## CF 1430D
+可能因為這題太老了，感覺不到這題 rating 有 1700 。
+### Description
+[Link](https://codeforces.com/problemset/problem/1430/D)
+
+### Solution
+對於操作一，先從由單一字元構成且長度 $\\geq 2$ 的子字串開始刪，且由左往右，如果找不到這種子字串則從最左邊開始刪。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1430/submission/337133361)
+
+## CF 1777C
+### Description
+[Link](https://codeforces.com/contest/1777/problem/C)
+
+### Solution
+#### 觀察
+- 因為 $\\{1,\\,2,\\,\\cdots,\\, \\frac{m}{2}\\}$ 中的每一個數必定至少是 $\\{\\frac{m}{2}+1,\\,\\frac{m}{2}+2,\\,\\cdots ,\\,m\\}$ 其中的一個因數，因此只需要檢查 $\\left[\\frac{m}{2}+1, m\\right]$ 。
+- 重複的元素沒有用。
+
+ 根據觀察可以把數列 $a$ 中所有小於 $(\\frac{m}{2}+1)$ 的數和重複的數刪掉後再排序，接著使用雙指標，暴力檢查當前的數是不是 $\\left[\\frac{m}{2}+1, m\\right]$ 的倍數，若小於就跳出迴圈。不斷右移右指標直到能湊齊 $\\left[\\frac{m}{2}+1, m\\right]$ 。
+
+最糟的情況是 $m = n$ ，根據觀察可以把數列的長度縮減成最多 $\\frac{n}{2}$ 且裡面元素不重複，  
+且總操作次數 $1 + 2 + \\dots + \\frac{n}{2} \\approx \\frac{n^2}{8}$ 。
+
+[AC Code](https://codeforces.com/contest/1777/submission/337883398)
