@@ -94,6 +94,6 @@ katex = true
  根據觀察可以把數列 $a$ 中所有小於 $(\\frac{m}{2}+1)$ 的數和重複的數刪掉後再排序，接著使用雙指標，暴力檢查當前的數是不是 $\\left[\\frac{m}{2}+1, m\\right]$ 的倍數，若小於就跳出迴圈。不斷右移右指標直到能湊齊 $\\left[\\frac{m}{2}+1, m\\right]$ 。
 
 最糟的情況是 $m = n$ ，根據觀察可以把數列的長度縮減成最多 $\\frac{n}{2}$ 且裡面元素不重複，  
-且總操作次數 $1 + 2 + \\dots + \\frac{n}{2} \\approx \\frac{n^2}{8}$ 。
+總操作次數 $1 + 2 + \\dots + \\frac{n}{2} \\approx \\frac{n^2}{8}$ 。
 
 [AC Code](https://codeforces.com/contest/1777/submission/337883398)
