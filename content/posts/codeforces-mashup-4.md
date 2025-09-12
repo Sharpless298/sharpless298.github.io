@@ -38,15 +38,4 @@ katex = true
 ### Solution
 `bitset` 練習題。
 
-```cpp
-#include <iostream>
-using namespace std;
-#define int long long
-signed main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullpr);
-
-    cout << "Hello, World!";
-}
-```
 [AC Code](https://codeforces.com/contest/1695/submission/338256083)
