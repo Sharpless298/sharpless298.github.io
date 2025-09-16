@@ -36,6 +36,33 @@ katex = true
 [Link](https://codeforces.com/contest/1695/problem/C)
 
 ### Solution
-`bitset` 練習題。
+DP + `bitset`
 
 [AC Code](https://codeforces.com/contest/1695/submission/338256083)
+
+## CF 1393C
+### Description
+[Link](https://codeforces.com/problemset/problem/1393/C)
+
+### Solution
+定義 $cnt_i$ 為數列 $a$ 中 $i$ 的個數， $cntcnt_i$ 為 $cnt_i$ 的個數。
+
+計算完 $cnt$ 和 $cntcnt$ 後，找到 $x = \\max\\{i : cntcnt_i \\neq 0\\}$ ，我們要嘗試在 $(x-1)$ 個間隔嘗試填上其它的數字最大化 $cnt_i = x$ 這幾個數之間的間隔，因此答案為 $cntcnt_x+\\frac{(n-cntcnt_x\\times x)}{x-1}-1$ 。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1393/submission/338538002)
+
+## CF 1814B
+### Description
+[Link](https://codeforces.com/problemset/problem/1814/B)
+
+### Solution
+當長度為 $k$ 時總花費為
+$$\\left\\lceil \\frac{a}{k} \\right\\rceil+\\left\\lceil \\frac{b}{k} \\right\\rceil+(k-1)$$
+
+把上高斯去掉後用算幾不等式得到 $k=\\sqrt{a+b}$ 會有最小值，但前面這樣算是假設為一維的情況，二維的情況比較複雜，我枚舉 $k\\in [1,\\sqrt{2\\max(a,b)}]$ 才 AC 。
+
+時間複雜度 $O(\\sqrt{\\max(a,b)})$ 。
+
+[AC Code](https://codeforces.com/contest/1814/submission/338843874)
