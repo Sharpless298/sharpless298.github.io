@@ -61,7 +61,7 @@ DP + `bitset`
 當長度為 $k$ 時總花費為
 $$\\left\\lceil \\frac{a}{k} \\right\\rceil+\\left\\lceil \\frac{b}{k} \\right\\rceil+(k-1)$$
 
-把上高斯去掉後用算幾不等式得到 $k=\\sqrt{a+b}$ 會有最小值，但前面這樣算是假設為一維的情況，二維的情況比較複雜，我枚舉 $k\\in [1,\\sqrt{2\\max(a,b)}]$ 才 AC 。
+把上高斯去掉後用算幾不等式得到 $k=\\sqrt{a+b}$ 會有最小值，但前面這樣算是假設為一維的情況，二維的情況比較複雜，我枚舉到 $k\\in [1,\\sqrt{2\\max(a,b)}]$ 才 AC 。
 
 時間複雜度 $O(\\sqrt{\\max(a,b)})$ 。
 

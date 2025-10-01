@@ -2,7 +2,7 @@ baseURL = "https://sharpless298.github.io/"
 title = "Sharpless298's Blog"
 # canonifyurls = true
 languagecode = "zh-TW"
-theme = "supremum"
+theme = "infimum"
 
 enableEmoji = true
 hasCJKLanguage = true
