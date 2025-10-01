@@ -1,3 +1,6 @@
 [submodule "themes/supremum"]
 	path = themes/supremum
 	url = git@github.com:Sharpless298/supremum.git
+[submodule "themes/infimum"]
+	path = themes/infimum
+	url = git@github.com:Sharpless298/infimum.git
