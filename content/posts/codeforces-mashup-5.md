@@ -16,3 +16,14 @@ $($ 最大左界 $-$ 最小左界 $+1)$ $\\times$ $($ 最大右界 $-$ 最小右
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/1793/submission/339199649)
+
+## CF 1334D
+### Description
+[Link](https://codeforces.com/contest/1334/problem/D)
+
+### Solution
+$n$ 個點最小字典序的 cycle 為 $1, 2, 1, 3, \\dots, 1, n, 2, 3, 2, 4,\\dots, 2, n, \\dots, n-1, n,1$ ，剩下實作應該不難。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1334/submission/343292234)
