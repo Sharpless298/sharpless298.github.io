@@ -47,7 +47,7 @@ DP + `bitset`
 ### Solution
 定義 $cnt_i$ 為數列 $a$ 中 $i$ 的個數， $cntcnt_i$ 為 $cnt_i$ 的個數。
 
-計算完 $cnt$ 和 $cntcnt$ 後，找到 $x = \\max\\{i : cntcnt_i \\neq 0\\}$ ，我們要嘗試在 $(x-1)$ 個間隔嘗試填上其它的數字最大化 $cnt_i = x$ 這幾個數之間的間隔，因此答案為 $cntcnt_x+\\frac{(n-cntcnt_x\\times x)}{x-1}-1$ 。
+計算完 $cnt$ 和 $cntcnt$ 後，找到 $x = \\max\\{i \\mid cntcnt_i \\neq 0\\}$ ，我們要嘗試在 $(x-1)$ 個間隔嘗試填上其它的數字最大化 $cnt_i = x$ 這幾個數之間的間隔，因此答案為 $cntcnt_x+\\frac{(n-cntcnt_x\\times x)}{x-1}-1$ 。
 
 時間複雜度 $O(n)$ 。
 
