@@ -27,3 +27,14 @@ $n$ 個點最小字典序的 cycle 為 $1, 2, 1, 3, \\dots, 1, n, 2, 3, 2, 4,\\d
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/1334/submission/343292234)
+
+## CF 1326D2
+### Description
+[Link](https://codeforces.com/contest/1326/problem/D2)
+
+### Solution
+令 $l=0, r=n-1$ ，當 $s_l=s_r$ 時，不斷右移 $l$ 和左移 $r$ ，接著在子字串 $s_l, s_{l+1}, s_{l+2},\\dots,s_{r}$ 中找到最長前綴或後綴的回文字串，可以用 hash 或 Manacher 。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1326/submission/346785509)
