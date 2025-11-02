@@ -38,3 +38,14 @@ $n$ 個點最小字典序的 cycle 為 $1, 2, 1, 3, \\dots, 1, n, 2, 3, 2, 4,\\d
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/1326/submission/346785509)
+
+## CF 1915G
+### Description
+[Link](https://codeforces.com/contest/1915/problem/G)
+
+### Solution
+最短路徑的變形，需要多開一個維度表示當前騎哪一台腳踏車，且當有一台腳踏車的 slow factor 比當前的低時，需要馬上換掉。
+
+參考這個[comment](https://codeforces.com/blog/entry/123952?#comment-1116011) ，時間複雜度 $O((n^2+2nm)\\log{n^2})$ 。
+
+[AC Code](https://codeforces.com/contest/1915/submission/347047425)
