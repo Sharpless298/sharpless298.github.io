@@ -27,7 +27,7 @@ katex = true
 
 *   令題目給定的集合 $S = \\{ s\_1, s\_2, \\dots, s\_m \\}, \\quad s\_1 < s\_2 < \\cdots < s\_m$
 *   $a\_1=s\_m$
-*   對於 $i \\geq 2$ ，設 \\(a\_j = \\min \\{ a\_k : k \\mid i,\\, k \\neq i \\}\\) ，若 $a\_j$ 為 $s\_t$， 則令 $a\_i$ 為 $s\_{t-1}$ ；若 $t=1$ 則無解。
+*   對於 $i \\geq 2$ ，令 \\(a\_j = \\min \\{ a\_k \\mid k \\text{ divides } i \\land k \\neq i \\}\\) 。若 $a\_j$ 為 $s\_t$， 則令 $a\_i$ 為 $s\_{t-1}$ ；若 $t=1$ 則無解。
 
 時間複雜度 $O(n \\log n)$ 。
 
