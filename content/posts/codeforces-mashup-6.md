@@ -38,8 +38,19 @@ katex = true
 - 所有與其他點的最遠距離大於等於 $k$ 會在同一個 component 。
 
 我們只需要計算每個點與其他點的距離就好，而一個點距離最遠的點一定在直徑兩端其中一點，因為如果最遠的點不在直徑上，就可以得出一條更長的直徑
-。每個點與其他點的最遠距離可以在兩次 DFS 找直徑的時候順便計算，所以我的 Code 裡面 LCA 其實是多餘的。
+。每個點與其他點的最遠距離可以在兩次 DFS 找直徑的時候順便計算，我寫的時候沒發現所以多用了一個 LCA 。
 
 時間複雜度 $O(n \\log n)$ 。
 
 [AC Code](https://codeforces.com/contest/1805/submission/348066004)
+
+## CF 1935D
+### Description
+[Link](https://codeforces.com/contest/1935/problem/D)
+
+### Solution
+正面算不好算，可以嘗試扣掉滿足 $x+y$ 和 $y-x$ 的 pair 再把重複的加回來，難點會是求重複的個數。把集合中所有 $x+y$ 和 $y-x$ 畫在二維平面上，不難發現重複的個數就是所有交點是整數點的個數，且只有當集合中兩點 $t_1,\\ t_2$ 的差值是偶數的時候交點才會是整數點，因此把集合分成奇偶兩個部份再用梯形公式把他們兩個加起來。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1935/submission/348635001)
