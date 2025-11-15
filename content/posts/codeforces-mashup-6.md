@@ -65,3 +65,24 @@ katex = true
 時間複雜度 $O(t\\log X)$ 。
 
 [AC Code](https://codeforces.com/contest/1922/problem/E)
+
+## CF 1338B
+### Description
+[Link](https://codeforces.com/contest/1338/problem/B)
+
+### Solution
+分開解決最小值和最大值。
+
+#### 最小值
+***Claim: 最小值只會是 1 或 3 。***
+
+最小值是 $1$ 應該蠻好想的，如果所有相異兩個葉子的簡單路徑所經過的邊數都是偶數，就可以把所有邊都填上一樣的數字；反之，最小值就是 $3$ ，我的構造方法和官解差不多，它講得也很清楚請自行參閱。
+
+可以隨便挑一個點 DFS ，所有葉子間的 parity 都要一樣最小值才會是 $1$ 。
+
+#### 最大值
+如果有多個 leaf 連接到同一個點，那些 leaf 和那個點的邊權都要一樣，所以我們需要紀錄有哪些點已經有被 leaf 接過了，每有一個 leaf 接到已經被至少一個 leaf 接過的點答案就會少 $1$ 。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1338/problem/B)
