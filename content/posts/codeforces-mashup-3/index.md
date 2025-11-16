@@ -71,7 +71,6 @@ katex = true
 [AC Code](https://codeforces.com/contest/1975/problem/D)
 
 ## CF 1430D
-可能因為這題太老了，感覺不到這題 rating 有 1700 。
 ### Description
 [Link](https://codeforces.com/problemset/problem/1430/D)
 
