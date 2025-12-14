@@ -5,7 +5,7 @@ title = 'Advent of Code 2025'
 katex = true
 +++
 
-記錄一下今年 AOC 的解題過程，即便今年縮減到只有 12 天，但題目品質不知道為什麼不如去年。
+記錄一下今年 AOC 的解題過程，即便今年縮減到只有 12 天，題目品質不知道為什麼不如去年。
 
 ## Day 03 - Part 2
 ### Description
