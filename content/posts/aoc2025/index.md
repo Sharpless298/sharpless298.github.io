@@ -91,7 +91,7 @@ katex = true
 
 ## Day 09 - Part 2
 ### Description
-有一個 $n \\times m$ 的網格圖，給 $v$ 個紅色磁磚，所有在同一行或同一列的紅色磁磚之間都有綠色磁磚把他們連起來，被包起來的點也會變成綠色磁磚。
+有一個 $n \\times m$ 的網格圖，給 $V$ 個紅色磁磚，所有在同一行或同一列的紅色磁磚之間都有綠色磁磚把他們連起來，被包起來的點也會變成綠色磁磚。
 
 可以選兩個點當作長方形的對角兩點，且此長方形每個點必須都是紅色或綠色的磁磚，求所有可能長方形的最大面積。
 
@@ -102,7 +102,7 @@ katex = true
 
 接著枚舉所有紅色點對，一個長方形合法若且唯若長方形的面積等於他包含紅色或綠色磁磚個數，同樣用二維前綴和預處理後可以 $O(1)$ 。
 
-時間複雜度 $O(v^2)$ 。
+時間複雜度 $O(V^2)$ 。
 
 [Code](https://github.com/Sharpless298/adventofcode/blob/main/2025/Day%2009/part2.cpp)
 
@@ -128,5 +128,7 @@ katex = true
 - 當 $v$ 是 $x$ ，$f_v(1)\\leftarrow f_v(1) + f_u(0), \\ f_v(3)\\leftarrow f_v(3) + f_u(2)$ 
 - 當 $v$ 是 $y$ ，$f_v(2)\\leftarrow f_v(2) + f_u(0), \\ f_v(3)\\leftarrow f_v(3) + f_u(0)$ 
 - 當 $v$ 不是 $x$ 或 $y$ ，$\\forall\\, i \\in [0,4)\\quad f_v(i) \\leftarrow f_v(i) + f_u(i)$
+
+時間複雜度 $O(V + E)$ 。
 
 [Code](https://github.com/Sharpless298/adventofcode/blob/main/2025/Day%2011/part2.cpp)
