@@ -9,7 +9,7 @@ katex = true
 
 ## Day 03 - Part 2
 ### Description
-給 $n$ 個正整數，求去掉當中 3 個 digit 後的最大值。
+給一個 $n$ 個 digit 的正整數，求去掉當中 3 個 digit 後的最大值。
 
 ### Solution
 動態規劃，定義 $f(i,j)$ 為選第 $i$ 個整數當作第 $j$ 位數的最大值。
