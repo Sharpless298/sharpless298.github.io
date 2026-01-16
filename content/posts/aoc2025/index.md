@@ -127,7 +127,7 @@ katex = true
 
 - 當 $v$ 是 $x$ ，$f_v(1)\\leftarrow f_v(1) + f_u(0), \\ f_v(3)\\leftarrow f_v(3) + f_u(2)$ 
 - 當 $v$ 是 $y$ ，$f_v(2)\\leftarrow f_v(2) + f_u(0), \\ f_v(3)\\leftarrow f_v(3) + f_u(0)$ 
-- 當 $v$ 不是 $x$ 或 $y$ ，$\\forall\\, i \\in [0,4)\\quad f_v(i) \\leftarrow f_v(i) + f_u(i)$
+- 當 $v$ 不是 $x$ 或 $y$ ，$\\text{for each } i \\in [0,4)\\quad f_v(i) \\leftarrow f_v(i) + f_u(i)$
 
 時間複雜度 $O(V + E)$ 。
 

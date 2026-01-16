@@ -1,0 +1,26 @@
++++
+date = '2026-01-08T03:09:52+08:00'
+draft = false
+title = 'Codeforces Mashup 7'
+katex = true
++++
+
+## CF 2157E
+### Description
+[Link](https://codeforces.com/problemset/problem/2157/E)
+
+### Solution
+
+定義 $cnt_x$ 為數列 $a$ 中的 $x$ 的個數。
+
+觀察發現 $i$ 從小到大，如果 $cnt_i > k$ ，則令 $cnt_{i+1} \\leftarrow cnt_{i+1}+cnt_i-1, \\quad cnt_i\\leftarrow 1$ 。  
+他們的最終 $cnt$ 會和題目的原操作最終 $cnt$ 會一樣，因此只需要在不斷執行上面操作的時候找到最長連續 $cnt_i > k$ 。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/2157/submission/357057728)
+
+## CF 2149F
+### Description
+[Link](https://codeforces.com/problemset/problem/2149/F)
+
