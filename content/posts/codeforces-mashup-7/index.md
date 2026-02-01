@@ -29,21 +29,19 @@ katex = true
 - 當 $k$ 個回合能走到 $d$ 點時，$k+1$ 也可以；當 $k$ 個回合不能走到 $d$ 點時，$k-1$ 個回合也不能。
 - 總共有 $k$ 個回合時，有 $k-d$ 個回合可以休息。
 
-觀察一告訴你這可以對答案二分搜。怎麼決定 $k$ 個回合能不能走到 $d$ 點？不難證明最好的方法是分成 $k-d+1$ 個連續步數走完，且盡可能平均分散。
+觀察一告訴你這可以對答案二分搜。至於怎麼決定 $k$ 個回合能不能走到 $d$ 點？不難證明最好的方法是分成 $k-d+1$ 個連續步數走完，且盡可能平均分散。
 
 時間複雜度 $O(t\\log d)$ 。
 
 [AC Code](https://codeforces.com/contest/2149/submission/357920353)
 
-## CF 2148G
+## CF 2109D
 ### Description
-[Link](https://codeforces.com/contest/2148/problem/G)
+[Link](https://codeforces.com/contest/2109/problem/D)
 
 ### Solution
-定義 $cnt_x$ 為前綴 $a$ 能被 $x$ 整除的個數。
+用 BFS 計算以奇數和偶數步走到每一個點的最短步數，如果不可能則設為無限大。接著從題目給的集合找到最大可能奇數和偶數，判斷每個點需要的奇或偶步數有沒有小於等於最大可能奇數和偶數。
 
-令 $g=\\gcd(a_1, a_2, \\dots, a_k)$ ，要找到最大的 $k$ 滿足 $g>\\gcd(g, a_k+1)$，i.e.， 對於長度為 $k$ 的前綴 $a$ ，找到 $\\max\\{cnt_x | 1\\leq x\\leq n \\land cnt_x \\neq k\\}$ 。
+時間複雜度 $O(n + m + l)$ 。
 
-時間複雜度 $O(n \\log n + n\\sqrt[3]{n})$ 。
-
-[AC Code](https://codeforces.com/contest/2148/submission/358087403)
+[AC Code](https://codeforces.com/contest/2109/submission/360805417)
