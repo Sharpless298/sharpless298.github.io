@@ -45,3 +45,14 @@ katex = true
 時間複雜度 $O(n + m + l)$ 。
 
 [AC Code](https://codeforces.com/contest/2109/submission/360805417)
+
+## CF 2064D
+### Description
+[Link](https://codeforces.com/contest/2064/problem/D)
+
+### Solution
+當一個數 $a$ 大於另一個數 $b$ 時，二進制下 $a$ 一定有某一個位置的位元為 $1$ 且在 $b$ 中同樣位置的位元為 $0$ ，且所有比這個位置更高的位元都相同。因此我們可以 greedy 從最高位元往最低位元看，當詢問 $x$ 的最高位元是 $1$ 時，可以往左吃直到遇到同樣這個位元也是 $1$ 的數（記這個數的 index 為 $prev$ ，且此時這個這個位元 xor 後變為 $0$ ），再往左吃直到又遇到這個位元是 $1$ 的數並更新答案。往低一位的位元時候從 $prev$ 這個位置開始看，因為 $prev$ 以前的數都必定可以被吃掉。而當位元本來是 $0$ 的情況 $prev$ 不變，只需要找到下一個 $1$ 的 index 更新答案。
+
+預處理 xor 前綴和 + 記錄每個位元的 1 的 index ，總時間複雜度 $O(q \\log W \\log n)$ 。
+
+[AC Code](https://codeforces.com/contest/2064/submission/362659445)
