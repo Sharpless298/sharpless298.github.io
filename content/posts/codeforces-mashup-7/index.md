@@ -53,10 +53,36 @@ katex = true
 ### Solution
 當一個數 $a$ 大於另一個數 $b$ 時，二進位表示下必然存在某個最高的位置，使得在這一位上 $a$ 為 $1$ 而 $b$ 為 $0$，且所有更高位元完全相同。因此我們可以 greedy 地處理每個詢問 $x$ 。
 
-考慮詢問 $x$ 目前 MSB 為位置，所有在這一位為 $0$ 的數，其 MSB 必定更小，因此一定可以被吃掉。我們只需要關注在這一位為 $1$ 的數：設從目前位置開始，第一個在這一位為 $1$ 的數的 index 為 $prev$，那麼 $x$ 會吃掉它，並使得這一位在 XOR 後變為 $0$，也就是 MSB 下降。接著繼續往左找下一個在這一位為 $1$ 的數，這個位置就是第一個可能無法繼續吃的位置之一，可以用來更新答案。當我們處理更低一位元時，只需要從 $prev$ 開始繼續找。
+考慮詢問 $x$ 目前 MSB 的位置，所有 $w$ 中這一位為 $0$ 的數，其 MSB 必定更小，因此一定可以被吃掉。我們只需要關注在這一位為 $1$ 的數：設從目前位置開始，第一個在這一位為 $1$ 的數的 index 為 $prev$，那麼 $x$ 會吃掉它，並使得這一位在 XOR 後變為 $0$，也就是 MSB 下降。接著繼續往左找下一個在這一位為 $1$ 的數，這個位置就是第一個可能無法繼續吃的位置之一，可以用來更新答案。當我們處理更低一位元時，只需要從 $prev$ 開始繼續找。
 
 如果目前這一位的前綴 XOR 為 $0$，那麼 $x$ 無法吃掉任何在這一位為 $1$ 的數，因為那些數的 MSB 嚴格大於目前的 $x$。此時只需要找到從目前位置開始第一個在這一位為 $1$ 的 index，並用它來更新答案，不需要移動 $prev$。
 
 預處理每個位元的 XOR 前綴和並記錄每個位元為 $1$ 的所有 index，用 binary search 找到下一個 $1$ 的位置。總時間複雜度 $O(q \\log W \\log n)$ 。
 
 [AC Code](https://codeforces.com/contest/2064/submission/362659445)
+
+## CF 2036F
+### Description
+[Link](https://codeforces.com/problemset/problem/2036/F)
+
+### Solution
+先求出 $[l,r]$ 的區間 XOR 值，再去 XOR 所有區間內的 $x$ 滿足 $x \\not\\equiv k \\pmod{2^i}$ 。
+
+令 $f(x)$ 為 $0 \\oplus 1 \\oplus \\dots \\oplus x$ ，觀察可以得出 
+\\[
+    f(x) =
+    \\begin{cases}
+    x & \\text{if } x \\equiv 0 \\pmod{4} \\\\
+    1 & \\text{if } x \\equiv 1 \\pmod{4} \\\\
+    x + 1 & \\text{if } x \\equiv 2 \\pmod{4} \\\\
+    0 & \\text{if } x \\equiv 3 \\pmod{4}
+    \\end{cases}
+\\]
+
+，$f(l - 1) \\oplus f(r)$ 就是 $[l,r]$ 的區間 XOR 值。
+
+接著計算所有 $x$ 滿足 $x \\not\\equiv k \\pmod{2^i}$ ，發現只要把 $l$ 和 $r$ 往右移 $i$ 個 bit 就可以再套用 $f(x)$ 。而比第 $i$ 位小的那幾個 bit 只有在那個 bit 是 $1$ 且長度為奇數的時候才會是 $1$ ，否則為 $0$ 。
+
+時間複雜度 $O(\\log r)$ 。
+
+[AC Code](https://codeforces.com/contest/2036/submission/365112916)
