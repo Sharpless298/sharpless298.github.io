@@ -78,7 +78,7 @@ $$\\displaystyle \\max_{i=1}^{n} \\left( a_i + \\operatorname{median}(c_i) \\rig
 #### Case 1
 找到最大的 $i$ 滿足 $b_i=0$ ，令 $a_i\\coloneqq a_i+k$ ，排序 $a$ 後套用 $(1)$ 式計算。
 
-### Case 2
+#### Case 2
 令 $f(x)$ 表示最少需要多少次操作使得 $a$ 中至少有$\\lfloor\\frac{n+1}{2}\\rfloor$ 個元素大於等於 $x$，$f(x)$ 是單調函數因此可以二分搜找到最大的 $x$ ，同樣排序 $a$ 後套用 $(1)$ 計算。
 
 時間複雜度 $O(n\\log(n+A))$ 。
