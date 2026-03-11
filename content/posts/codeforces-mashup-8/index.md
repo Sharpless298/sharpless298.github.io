@@ -68,12 +68,13 @@ katex = true
 $$\\displaystyle \\max_{i=1}^{n} \\left( a_i + \\operatorname{median}(c_i) \\right) = a_n+a_{\\lfloor\\frac{n}{2}\\rfloor}\\tag{1}$$
 
 
-再考慮 $k\\neq0$ ，題目所求 $\\displaystyle \\max_{i=1}^{n} \\left( a_i + \\operatorname{median}(c_i) \\right)$ ，這給了我們兩種可能
+再考慮 $k\\neq0$ ，題目所求 $\\displaystyle \\max_{i=1}^{n} \\left( a_i + \\operatorname{median}(c_i) \\right)$ ，這給了我們三種可能
 
 1. 增加 $a_i$ ，
-2. 增加 $\\operatorname{median}(c_i)$ 。
+2. 增加 $\\operatorname{median}(c_i)$ ，
+3. 同時增加 $a_i$ 和 $\\operatorname{median}(c_i)$ 。
 
-不難證明同時增加這兩項必定比只增加一項糟糕，因此可以分成兩種情況，答案取較大者。
+不難證明同時增加兩項必定比只增加其中一項糟糕，因此可以分成兩種情況，答案取較大者。
 
 #### Case 1
 找到最大的 $i$ 滿足 $b_i=0$ ，令 $a_i\\coloneqq a_i+k$ ，排序 $a$ 後套用 $(1)$ 式計算。
