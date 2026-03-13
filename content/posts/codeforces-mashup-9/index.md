@@ -50,7 +50,7 @@ katex = true
 ### Solution
 令 $d_u$ 表示 $u$ 點的深度，LCS 的最大值會是 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ ，並且我們只需要關注那些 $d_v \\leq \\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 的點就好，因為如果 LCS 的一部分存在於比 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 更深的地方，那跟上面的點交換也必定能滿足，並且需要的 label 個數只會更小或不變。
 
-令 $cnt_i$ 表示 $d_u=i$ 的點有多少個，$x$ 表示 $d_v>\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 的個數有多少個。
+令 $cnt_i$ 表示 $d_u=i$ 的點有多少個，$x$ 表示 $d_v>\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 的點有多少個。
 
 因為那些深度超過 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 的點放什麼都可以，所以檢查 $cnt$ 能不能恰好湊出 $[k-x,k]$ 之間至少一個數字，如果可以則答案為 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ ，否則為 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)-1$ 。
 
