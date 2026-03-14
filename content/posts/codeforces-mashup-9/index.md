@@ -54,7 +54,23 @@ katex = true
 
 因為那些深度超過 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ 的點放什麼都可以，所以檢查 $cnt$ 能不能恰好湊出 $[k-x,k]$ 之間至少一個數字，如果可以則答案為 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)$ ，否則為 $\\displaystyle\\min_{u\\in \\text{leaf}}(d_u)-1$ 。
 
-subset sum 的部份用 `bitset`， 時間複雜度 $O(\\frac{n ^ 2}{64})$ 。
+subset sum + `bitset`， 時間複雜度 $O(\\frac{n ^ 2}{64})$ 。
 
 
 [AC Code](https://codeforces.com/contest/2138/submission/366443790)
+
+## CF 2131G
+### Description
+[Link](https://codeforces.com/problemset/problem/2131/G)
+
+### Solution
+令 $f(x)$ 表示把集合 $s$ 中的最小元素 $x$ 移除，並且移除所有後續新增元素所需的操作次數。同樣地，令 $g(x)$ 表示操作所得到的乘積，觀察可以得到
+
+$$f(1)=1,\\quad f(x)=1+\\sum_{i=1}^{x-1}f(i)=2^{x-1}$$
+$$g(1)=1,\\quad g(x)=x\\times\\prod_{i=1}^{x-1}g(i)$$
+
+注意到 $k\\leq 10^9<f(32)$ ，因此只需要計算到 $f(31)$ 就好。排序 $s$ 後從小到大不斷把 $k$ 扣掉 $s_i$ 直到 $s_i>k$ ，接著寫個遞迴模擬剩下的操作直到 $k$ 被扣到 $0$ 。
+
+時間複雜度 $O(n \\log n + \\log ^ 2 k)$ 。
+
+[AC Code](https://codeforces.com/contest/2131/submission/366602591)
