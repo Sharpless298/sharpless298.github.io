@@ -74,3 +74,18 @@ $$g(1)=1,\\quad g(x)=x\\times\\prod_{i=1}^{x-1}g(i)$$
 時間複雜度 $O(n \\log n + \\log ^ 2 k)$ 。
 
 [AC Code](https://codeforces.com/contest/2131/submission/366602591)
+
+## CF 2063D
+### Description
+[Link](https://codeforces.com/problemset/problem/2063/D)
+
+### Solution
+觀察可以得到 $k_{max}=\\min(n, m, \\lfloor\\frac{n+m}{3}\\rfloor)$ 。
+
+一個三角形由一邊的一個點和另一邊的兩個點構成，並且那一個點不管選哪一個都不會影響三角形的面積，因此我們要想辦法極大化那兩個點構成的邊長。排序 $a$ 和 $b$ ，每次取最遠的兩點構成一個邊長並記錄這個邊長是 $a$ 還是 $b$ 取出來的，丟進一個陣列 $c$ 並由大到小排序。
+
+每次要盡可能取最長的邊，開兩個 `stack` 每次 push 取過的邊。當遇到 $a$ 或 $b$ 的點不夠用時，要把不夠用的地方刪掉一條在那個地方取過且最小的邊，從 `stack` 直接 pop 掉就好，再找另一邊的邊補回去。
+
+時間複雜度 $O(n \\log n)$ 。
+
+[AC Code](https://codeforces.com/contest/2063/submission/367080891)
