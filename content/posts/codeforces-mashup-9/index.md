@@ -86,6 +86,6 @@ $$g(1)=1,\\quad g(x)=x\\times\\prod_{i=1}^{x-1}g(i)$$
 
 每次要盡可能取最長的邊，開兩個 `stack` 每次 push 取過的邊。當遇到 $a$ 或 $b$ 的點不夠用時，要把不夠用的地方刪掉一條在那個地方取過且最小的邊，從 `stack` 直接 pop 掉就好，再找另一邊的邊補回去。
 
-時間複雜度 $O(n \\log n)$ 。
+時間複雜度 $O((n+m) \\log (n+m))$ 。
 
 [AC Code](https://codeforces.com/contest/2063/submission/367080891)
