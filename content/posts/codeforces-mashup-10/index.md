@@ -24,3 +24,14 @@ katex = true
 時間複雜度 $O(n)$ 。
 
 [AC Code](https://codeforces.com/contest/2051/submission/367336214)
+
+## CF 1978E
+### Description
+[Link](https://codeforces.com/problemset/problem/1978/E)
+
+### Solution
+注意到先對整個 $s$ 執行操作一，再對整個 $t$ 執行操作二總是最好。假設 $s^{\\prime}$ 和 $t^{\\prime}$ 是經過操作後的數列，用前綴和預處理 $s^{\\prime}$ 前 $i$ 個 $s_{i}^{\\prime}=1$ 的個數。觀察到當把完整字串切成 $[l,r]$ 的子字串時，受到影響地方只有 $s_l,s_{l+1},s_{r-1},s_r$ 四個地方，用 $s,\\ s^{\\prime},\\ t$ 就可以推出每個位置會不會受影響。
+
+時間複雜度 $O(n+q)$ 。
+
+[AC Code](https://codeforces.com/contest/1978/submission/367557220)
