@@ -35,3 +35,22 @@ katex = true
 時間複雜度 $O(n+q)$ 。
 
 [AC Code](https://codeforces.com/contest/1978/submission/367557220)
+
+## CF 1956D
+### Description
+#### 觀察
+- 把任意長度子陣列的元素全都變成 $0$ 的操作不會超過 $2$ 。
+- 元素全為 $0$ 的長度 $k$ 陣列可以在 $2^k$ 次操作把全部元素換成 $k$ 。
+- $2^{18}=262144<5\\times10^5$
+
+使用動態規劃，令 $f(i)$ 表示前 $i$ 個數的總和最大值，轉移
+\\[
+    f(i) = \\max \\left(
+    a_i + f(i-1),\\;
+    \\max_{1 \\le k \\le i} \\left( f(i-k) + k^2 \\right)
+    \\right)
+\\]
+
+時間複雜度 $O(2^n)$ 。
+
+[AC Code](https://codeforces.com/contest/1956/submission/367758470)
