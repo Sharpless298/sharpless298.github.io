@@ -54,3 +54,12 @@ katex = true
 時間複雜度 $O(2^n)$ 。
 
 [AC Code](https://codeforces.com/contest/1956/submission/367758470)
+
+## CF 1931G
+### Description
+[Link](https://codeforces.com/problemset/problem/1931/G)
+
+### Solution
+一個合法的擺放方式會是第一塊和第二塊拼圖交替，並且在它們之中或兩側穿插第三塊和第四塊拼圖，並且這兩塊的穿插方式是獨立的，因此分別對第三塊和第四塊做 stars and bars 相乘就是答案，特別地當第一塊和第二塊個數相同的時候會有兩種可能。
+
+[AC Code](https://codeforces.com/contest/1931/submission/368421235)
