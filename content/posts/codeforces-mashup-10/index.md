@@ -63,3 +63,14 @@ katex = true
 一個合法的擺放方式會是第一塊和第二塊拼圖交替，並且在它們之中或兩側穿插第三塊和第四塊拼圖，並且這兩塊的穿插方式是獨立的，因此分別對第三塊和第四塊做 stars and bars 相乘就是答案，特別地當第一塊和第二塊個數相同的時候會有兩種可能。
 
 [AC Code](https://codeforces.com/contest/1931/submission/368421235)
+
+## CF 1867E1
+### Description
+[Link](https://codeforces.com/problemset/problem/1867/E1)
+
+### Solution
+先用 $k \\lfloor\\frac{n}{k}\\rfloor$ 次詢問求出前 $k \\lfloor\\frac{n}{k}\\rfloor$ 項的 XOR 值。最後那 $n \\bmod k$ 項每兩項來看，假設為 $a_i,a_{i+1}$ ，利用 $$\\operatorname{query}(i-k+1) \\oplus \\operatorname{query}(i-k+2)=a_i \\oplus a_{i+1}$$ ，操作完後也不會動到大於 $i+2$ 的位置，這樣最糟只會需要 $97$ 次操作。
+
+時間複雜度 $O(n)$ 。
+
+[AC Code](https://codeforces.com/contest/1867/submission/368786696)
